@@ -42,6 +42,7 @@ from config import MAV_VID_COCO_PATH, DRONEBIRD_COCO_PATH, ANTI_UAV_COCO_PATH
 from config import MAV_VID_DATASET_NAME, DRONEBIRD_DATASET_NAME, ANTI_UAV_DATASET_NAME
 from config import MAV_VID_IMG_DIR, DRONEBIRD_IMG_DIR, ANTI_UAV_IMG_DIR
 from config import LEARNING_RATE
+from config import OUTPUT_DIR
 
 from config import NOISE_ENABLED, JPEG_COMPRESSION_ENABLED
 
@@ -252,9 +253,9 @@ def main(rank, world_size, learning_rate, test_name, test_group, dataset_name, j
         }
         print("saving checkpoint...")
         #/home/observation/repos/drone_model_detector/model/multi_drone/{TEST_GROUP}/{TEST_NAME} exist. if not make it 
-        if not os.path.exists(f"/home/observation/repos/drone_model_detector/model/multi_drone/{test_group}/{test_name}"):
-            os.makedirs(f"/home/observation/repos/drone_model_detector/model/multi_drone/{test_group}/{test_name}")
-        utils.save_on_master(checkpoint, f"/home/observation/repos/drone_model_detector/model/multi_drone/{test_group}/{test_name}/lr_{learning_rate}_epoch_{epoch}.pt")
+        if not os.path.exists(f"{OUTPUT_DIR}multi_drone/{test_group}/{test_name}"):
+            os.makedirs(f"{OUTPUT_DIR}multi_drone/{test_group}/{test_name}")
+        utils.save_on_master(checkpoint, f"{OUTPUT_DIR}multi_drone/{test_group}/{test_name}/lr_{learning_rate}_epoch_{epoch}.pt")
 
         last_epoch = epoch
   
