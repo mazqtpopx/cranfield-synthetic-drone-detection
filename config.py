@@ -8,7 +8,7 @@ MODEL_PATH = f"{REPOS_DIR}/repos/drone_model_detector/model/multi_drone/100m_tes
 OUTPUT_DIR = f"{REPOS_DIR}/repos/drone_model_detector/model/"
 
 #Directory containing the datasets
-DATASET_DIR = "/home/observation/repos/datasets/"
+DATASET_DIR = f"{REPOS_DIR}/repos/datasets/"
 
 #Directory names containing the datasets
 ANTIUAV_DIR = os.path.join(DATASET_DIR, "anti-uav")
