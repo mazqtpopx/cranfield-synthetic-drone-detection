@@ -1,11 +1,11 @@
 import os
 
 #Replace this with your (e.g. /home/{user}/ on linux)
-REPOS_DIR = "/home/observation/"
+REPOS_DIR = "/home/observation"
 
 #Path to the faster rcnn model (.pt)
-MODEL_PATH = "/home/observation/repos/drone_model_detector/model/multi_drone/100m_tests/lr_0_00002.pt"
-OUTPUT_DIR = "/home/observation/repos/drone_model_detector/model/"
+MODEL_PATH = f"{REPOS_DIR}/repos/drone_model_detector/model/multi_drone/100m_tests/lr_0_00002.pt"
+OUTPUT_DIR = f"{REPOS_DIR}/repos/drone_model_detector/model/"
 
 #Directory containing the datasets
 DATASET_DIR = "/home/observation/repos/datasets/"
@@ -24,10 +24,9 @@ MAV_VID_COCO_PATH = "dataset_coco_files/mav-vid/val.json"
 DRONEBIRD_COCO_PATH = "dataset_coco_files/drone-vs-bird/val.json"
 ANTI_UAV_COCO_PATH = "dataset_coco_files/anti-uav/val-rgb.json"
 
-# MAV_VID_IMG_DIR = "dataset_coco_files/mav-vid/val_imgs"
-MAV_VID_IMG_DIR = "/home/observation/repos/datasets/mav-vid/imgs"
-DRONEBIRD_IMG_DIR = "/home/observation/repos/datasets/drone-vs-bird/imgs"
-ANTI_UAV_IMG_DIR = "/home/observation/repos/datasets/anti-uav/"
+MAV_VID_IMG_DIR = f"{REPOS_DIR}/repos/datasets/mav-vid/imgs"
+DRONEBIRD_IMG_DIR = f"{REPOS_DIR}/repos/datasets/drone-vs-bird/imgs"
+ANTI_UAV_IMG_DIR = f"{REPOS_DIR}/repos/datasets/anti-uav/"
 
 COCO_PATHS = [MAV_VID_COCO_PATH, DRONEBIRD_COCO_PATH, ANTI_UAV_COCO_PATH]
 DATASET_NAMES = [MAV_VID_DATASET_NAME, DRONEBIRD_DATASET_NAME, ANTI_UAV_DATASET_NAME]
@@ -87,5 +86,3 @@ JPEG_COMPRESSION_ENABLED = False
 
 MIN_DRONE_AREA = 1
 
-# ANTIUAV_DIR = 'C:\\Users\\Mariusz\\Downloads\\dataset\\test-dev\\'
-# BIRD_DATASET = 'E:\\datasets\\birds_nae_lab\\BIRD_v200_1_1\\'
